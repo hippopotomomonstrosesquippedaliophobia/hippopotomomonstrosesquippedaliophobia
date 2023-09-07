@@ -4563,30 +4563,6 @@ if game.PlaceId == Supported.Sakura_Stand then
         end 
     end);
 
-    local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Не работает (Deku)  💀", false, function(Value)
-        getgenv().BossingDio = Value
-
-        while getgenv().BossingDio == true do wait(0.015)
-            pcall(function()
-                if workspace.Living:FindFirstChild("Deku") and workspace.Living:FindFirstChild("Deku"):FindFirstChild("HumanoidRootPart") then
-                    game:GetService("Players").LocalPlayer.Character:MoveTo(game:GetService("Workspace").Living["Deku"].HumanoidRootPart.Position + -game:GetService("Workspace").Living["Deku"].HumanoidRootPart.CFrame.LookVector * 3) game:GetService("Players").LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(game:GetService("Workspace").Living["Deku"].HumanoidRootPart.Position + -game:GetService("Workspace").Living["Deku"].HumanoidRootPart.CFrame.LookVector * 3, game:GetService("Workspace").Living["Deku"].HumanoidRootPart.Position - -game:GetService("Workspace").Living["Deku"].HumanoidRootPart.CFrame.LookVector * 3));                    
-                    task.spawn(function()
-                        pcall(function()
-                            getgenv().Press = function(v) -- bruh 2
-                                return game:GetService("VirtualInputManager"):SendKeyEvent(true, v, false, game);
-                            end
-                            Press("E");Press("T");Press("V");Press("G");Press("Y");Press("H");Press("R")
-                            game:GetService("VirtualUser"):ClickButton1(Vector2.new());
-                        end)
-                    end)
-                else
-                    Notif:Notification("Resonance 💀", "Deku not found", "GothamSemibold", "Gotham", 3);
-                end
-            end)
-        end 
-    end);
-
-
     local BackupEndLabel = BackupEndPage.AddLabel("[+] Places  🗺️");
     local BackupEndButton = BackupEndPage.AddButton("Shop   🏪", function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-375.9766845703125, -31.704181671142578, 1810.9178466796875);
