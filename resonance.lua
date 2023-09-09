@@ -4562,6 +4562,133 @@ if game.PlaceId == Supported.Sakura_Stand then
             end)
         end 
     end);
+local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Deku 💀", false, function(Value)
+
+    getgenv().BossingDeku = Value
+    while getgenv().BossingDeku == true do
+        wait(0.015)
+        pcall(function()
+            local dekuHumanoid = workspace.Living:FindFirstChild("Deku")
+            if dekuHumanoid and dekuHumanoid:FindFirstChild("HumanoidRootPart") then
+                local dekuRootPart = dekuHumanoid.HumanoidRootPart
+                local playerCharacter = game:GetService("Players").LocalPlayer.Character
+                local playerPosition = playerCharacter and playerCharacter.PrimaryPart and playerCharacter.PrimaryPart.Position
+                if playerPosition then
+                    local targetPosition = dekuRootPart.Position + dekuRootPart.CFrame.LookVector * 3
+                    playerCharacter:MoveTo(targetPosition)
+                    playerCharacter:SetPrimaryPartCFrame(CFrame.new(targetPosition))
+                    
+                    task.spawn(function()
+                        pcall(function()
+                            local function Press(key)
+                                return game:GetService("VirtualInputManager"):SendKeyEvent(true, key, false, game)
+                            end
+                            Press("E")
+                            Press("T")
+                            Press("V")
+                            Press("G")
+                            Press("Y")
+                            Press("H")
+                            Press("R")
+                            game:GetService("VirtualUser"):ClickButton1(Vector2.new())
+                        end)
+                    end)
+                    
+                     game:GetService("Players").LocalPlayer.Character:MoveTo(game:GetService("Workspace").Living["Deku"].HumanoidRootPart.Position + game:GetService("Workspace").Living["Deku"].HumanoidRootPart.CFrame.LookVector * 3)
+                     game:GetService("Players").LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(game:GetService("Workspace").Living["Deku"].HumanoidRootPart.Position + game:GetService("Workspace").Living["Deku"].HumanoidRootPart.CFrame.LookVector * 3, game:GetService("Workspace").Living["Deku"].HumanoidRootPart.Position - game:GetService("Workspace").Living["Deku"].HumanoidRootPart.CFrame.LookVector * 3))
+                end
+            else
+                Notif:Notification("Resonance 💀", "Deku not found", "GothamSemibold", "Gotham", 3)
+            end
+        end)
+    end
+end)
+
+
+local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Bandit ezz  💀", false, function(Value)
+    getgenv().BossingBandit = Value
+    while getgenv().BossingBandit == true do
+        wait(0.015)
+        pcall(function()
+            local banditHumanoid = workspace.Living:FindFirstChild("Bandit")
+            if banditHumanoid and banditHumanoid:FindFirstChild("HumanoidRootPart") then
+                local banditRootPart = banditHumanoid.HumanoidRootPart
+                local playerCharacter = game:GetService("Players").LocalPlayer.Character
+                local playerPosition = playerCharacter and playerCharacter.PrimaryPart and playerCharacter.PrimaryPart.Position
+                if playerPosition then
+                    local targetPosition = banditRootPart.Position - banditRootPart.CFrame.LookVector * 3
+                    playerCharacter:MoveTo(targetPosition)
+                    playerCharacter:SetPrimaryPartCFrame(CFrame.new(targetPosition))
+                    
+                    task.spawn(function()
+                        pcall(function()
+                            local function Press(key)
+                                return game:GetService("VirtualInputManager"):SendKeyEvent(true, key, false, game)
+                            end
+                            Press("E")
+                            Press("T")
+                            Press("V")
+                            Press("G")
+                            Press("Y")
+                            Press("H")
+                            Press("R")
+                            game:GetService("VirtualUser"):ClickButton1(Vector2.new())
+                        end)
+                    end)
+
+                    -- Ваш фрагмент кода, который вы хотели добавить
+                    playerCharacter:MoveTo(banditRootPart.Position + banditRootPart.CFrame.LookVector * 3)
+                    playerCharacter:SetPrimaryPartCFrame(CFrame.new(banditRootPart.Position + banditRootPart.CFrame.LookVector * 3, banditRootPart.Position - banditRootPart.CFrame.LookVector * 3))
+                end
+            else
+                Notif:Notification("Resonance 💀", "Bandit not found", "GothamSemibold", "Gotham", 3)
+            end
+        end)
+    end
+end)
+
+local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Thug ezz  💀", false, function(Value)
+    getgenv().BossingThug = Value
+    while getgenv().BossingThug == true do
+        wait(0.015)
+        pcall(function()
+            local thugHumanoid = workspace.Living:FindFirstChild("Thug")
+            if thugHumanoid and thugHumanoid:FindFirstChild("HumanoidRootPart") then
+                local thugRootPart = thugHumanoid.HumanoidRootPart
+                local playerCharacter = game:GetService("Players").LocalPlayer.Character
+                local playerPosition = playerCharacter and playerCharacter.PrimaryPart and playerCharacter.PrimaryPart.Position
+                if playerPosition then
+                    local targetPosition = thugRootPart.Position - thugRootPart.CFrame.LookVector * 3
+                    playerCharacter:MoveTo(targetPosition)
+                    playerCharacter:SetPrimaryPartCFrame(CFrame.new(targetPosition))
+                    
+                    task.spawn(function()
+                        pcall(function()
+                            local function Press(key)
+                                return game:GetService("VirtualInputManager"):SendKeyEvent(true, key, false, game)
+                            end
+                            Press("E")
+                            Press("T")
+                            Press("V")
+                            Press("G")
+                            Press("Y")
+                            Press("H")
+                            Press("R")
+                            game:GetService("VirtualUser"):ClickButton1(Vector2.new())
+                        end)
+                    end)
+
+                    
+                    playerCharacter:MoveTo(thugRootPart.Position + thugRootPart.CFrame.LookVector * 3)
+                    playerCharacter:SetPrimaryPartCFrame(CFrame.new(thugRootPart.Position + thugRootPart.CFrame.LookVector * 3, thugRootPart.Position - thugRootPart.CFrame.LookVector * 3))
+                end
+            else
+                Notif:Notification("Resonance 💀", "Thug not found", "GothamSemibold", "Gotham", 3)
+            end
+        end)
+    end
+end)
+
 
     local BackupEndLabel = BackupEndPage.AddLabel("[+] Places  🗺️");
     local BackupEndButton = BackupEndPage.AddButton("Shop   🏪", function()
