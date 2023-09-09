@@ -4636,7 +4636,6 @@ local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Bandit ezz  💀", fals
                         end)
                     end)
 
-                    -- Ваш фрагмент кода, который вы хотели добавить
                     playerCharacter:MoveTo(banditRootPart.Position + banditRootPart.CFrame.LookVector * 3)
                     playerCharacter:SetPrimaryPartCFrame(CFrame.new(banditRootPart.Position + banditRootPart.CFrame.LookVector * 3, banditRootPart.Position - banditRootPart.CFrame.LookVector * 3))
                 end
