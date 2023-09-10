@@ -5114,15 +5114,6 @@ local SettingsToggle = Settings.AddToggle("Fps Booster  📈", true, function(Va
 end)
 
 
-local SettingsButton = Settings.AddButton("Restart Resonance 💀", function()
-    --// Resonance 💀\\--
-    getgenv().Resonance_Hub = "https://raw.githubusercontent.com/Lvl9999/Flames/main/Source";
-
-    pcall(function()
-        loadstring(game:HttpGet(getgenv().Resonance_Hub))();
-    end)
-end);
-
 local SettingsLabel = Settings.AddLabel("Server  🖥️");
 
 local SettingsButton = Settings.AddButton("Rejoin", function()
