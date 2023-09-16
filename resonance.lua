@@ -4441,6 +4441,25 @@ if game.PlaceId == Supported.Sakura_Stand then
         end
     end);
 
+    local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Block Damage  ⚔️", false, function(Value)
+        getgenv().ParryLolz = Value
+
+        while getgenv().ParryLolz == true do wait(0.001)
+            pcall(function()
+                game:GetService("Players").LocalPlayer.Character:MoveTo(game:GetService("Workspace").Living["Attacking Dummy"].HumanoidRootPart.Position + -game:GetService("Workspace").Living["Attacking Dummy"].HumanoidRootPart.CFrame.LookVector * -5); game:GetService("Players").LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(game:GetService("Workspace").Living["Attacking Dummy"].HumanoidRootPart.Position + -game:GetService("Workspace").Living["Attacking Dummy"].HumanoidRootPart.CFrame.LookVector * -5, game:GetService("Workspace").Living["Attacking Dummy"].HumanoidRootPart.Position - -game:GetService("Workspace").Living["Attacking Dummy"].HumanoidRootPart.CFrame.LookVector * -5));
+                if workspace.Living["Attacking Dummy"].CDValues:FindFirstChild("OnCooldown") then
+                    getgenv().Press = function(v)
+                        return game:GetService("VirtualInputManager"):SendKeyEvent(true, v, false, game);
+                    end
+                    getgenv().Unpress = function(v)
+                        return game:GetService("VirtualInputManager"):SendKeyEvent(false, v, false, game);
+                    end
+                    Press("F");wait(0.15);Unpress("F");
+                end
+            end)
+        end
+    end);
+
     local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Deal Damage   👊", false, function(Value)
         getgenv().DealingPainX = Value
         
