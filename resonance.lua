@@ -4707,6 +4707,91 @@ local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Thug ezz  💀", false,
     end
 end)
 
+local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Glutton Curse ezz 💀", false, function(Value)
+    getgenv().BossingGlutton = Value
+    while getgenv().BossingGlutton == true do
+        wait(0.015)
+        pcall(function()
+            local gluttonRootPart = workspace.Living["Glutton Curse"].HumanoidRootPart
+            local playerCharacter = game:GetService("Players").LocalPlayer.Character
+            local playerPosition = playerCharacter and playerCharacter.PrimaryPart and playerCharacter.PrimaryPart.Position
+            if playerPosition then
+                local targetPosition = gluttonRootPart.Position - gluttonRootPart.CFrame.LookVector * 3
+                playerCharacter:MoveTo(targetPosition)
+                playerCharacter:SetPrimaryPartCFrame(CFrame.new(targetPosition))
+                
+                task.spawn(function()
+                    pcall(function()
+                        local function Press(key)
+                            return game:GetService("VirtualInputManager"):SendKeyEvent(true, key, false, game)
+                        end
+                        Press("E")
+                        Press("T")
+                        Press("V")
+                        Press("G")
+                        Press("Y")
+                        Press("H")
+                        Press("R")
+                        game:GetService("VirtualUser"):ClickButton1(Vector2.new())
+                    end)
+                end)
+
+                playerCharacter:MoveTo(gluttonRootPart.Position + gluttonRootPart.CFrame.LookVector * 3)
+                playerCharacter:SetPrimaryPartCFrame(CFrame.new(gluttonRootPart.Position + gluttonRootPart.CFrame.LookVector * 3, gluttonRootPart.Position - gluttonRootPart.CFrame.LookVector * 3))
+            else
+                Notif:Notification("Resonance 💀", "Glutton Curse's HumanoidRootPart not found", "GothamSemibold", "Gotham", 3)
+            end
+        end)
+    end
+end);
+
+
+local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Curse ezz 💀", false, function(Value)
+    getgenv().BossingCurse = Value
+
+    while getgenv().BossingCurse == true do
+        wait(0.015)
+        pcall(function()
+            local curseRootPart = workspace.Living["Mosquito Curse"].HumanoidRootPart
+            local playerCharacter = game:GetService("Players").LocalPlayer.Character
+
+            if curseRootPart and playerCharacter then
+                local playerPosition = playerCharacter:FindFirstChild("HumanoidRootPart").Position
+                local targetPosition = curseRootPart.Position
+                local direction = (playerPosition - targetPosition).unit -- Получаем единичный вектор в направлении к игроку
+
+                -- Устанавливаем ориентацию в сторону игрока
+                playerCharacter:SetPrimaryPartCFrame(CFrame.new(playerCharacter.PrimaryPart.Position, targetPosition))
+                
+                task.spawn(function()
+                    pcall(function()
+                        local function Press(key)
+                            return game:GetService("VirtualInputManager"):SendKeyEvent(true, key, false, game)
+                        end
+                        Press("E")
+                        Press("T")
+                        Press("V")
+                        Press("G")
+                        Press("Y")
+                        Press("H")
+                        Press("R")
+                        game:GetService("VirtualUser"):ClickButton1(Vector2.new())
+                    end)
+                end)
+
+                -- Добавляем движение персонажа к противнику и устанавливаем его ориентацию
+                playerCharacter:MoveTo(targetPosition + direction * 3)
+                playerCharacter:SetPrimaryPartCFrame(CFrame.new(targetPosition + direction * 3, targetPosition - direction * 3))
+            else
+                Notif:Notification("Resonance 💀", "Mosquito Curse's HumanoidRootPart not found", "GothamSemibold", "Gotham", 3)
+            end
+        end)
+    end
+end)
+
+
+
+
 
     local BackupEndLabel = BackupEndPage.AddLabel("[+] Places  🗺️");
     local BackupEndButton = BackupEndPage.AddButton("Shop   🏪", function()
