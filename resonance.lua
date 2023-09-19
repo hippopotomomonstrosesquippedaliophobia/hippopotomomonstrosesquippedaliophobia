@@ -4707,7 +4707,7 @@ local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Thug ezz  💀", false,
     end
 end)
 
-local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Glutton Curse ezz 💀", false, function(Value)
+local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("пидарас у которого только рот и мозг 💀", false, function(Value)
     getgenv().BossingGlutton = Value
     while getgenv().BossingGlutton == true do
         wait(0.015)
@@ -4746,7 +4746,7 @@ local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Glutton Curse ezz 💀"
 end);
 
 
-local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Curse ezz 💀", false, function(Value)
+local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("стрекоза ёбанная 💀", false, function(Value)
     getgenv().BossingCurse = Value
 
     while getgenv().BossingCurse == true do
