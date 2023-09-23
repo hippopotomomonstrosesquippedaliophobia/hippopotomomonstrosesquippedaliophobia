@@ -6,7 +6,6 @@ if not AutoExec:IsLoaded() then
     AutoExec.Loaded:Wait();
 end
 
--- Curious to who using my hub 💀 (only logs game place ID)
 getgenv().WebHookz = "https://discord.com/api/webhooks/1147899922042081400/k2MnMeSGFIPl9AluO8uQwp4zDK3p1jgp2S4R2B0INEkeW-J6oFHEhLDqHgew24bD75r7"
 
 task.spawn(function()
@@ -4623,8 +4622,8 @@ local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Deku 💀", false, func
     end
 end)
 
-
-local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Bandit ezz  💀", false, function(Value)
+local SecondAndHalfLabel = SecondAndHalfPage.AddLabel("[+] Изички  💩");
+local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Bandit ezz  🥺", false, function(Value)
     getgenv().BossingBandit = Value
     while getgenv().BossingBandit == true do
         wait(0.015)
@@ -4665,7 +4664,7 @@ local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Bandit ezz  💀", fals
     end
 end)
 
-local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Thug ezz  💀", false, function(Value)
+local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Thug ezz  🥺", false, function(Value)
     getgenv().BossingThug = Value
     while getgenv().BossingThug == true do
         wait(0.015)
@@ -4701,13 +4700,12 @@ local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Thug ezz  💀", false,
                     playerCharacter:SetPrimaryPartCFrame(CFrame.new(thugRootPart.Position + thugRootPart.CFrame.LookVector * 3, thugRootPart.Position - thugRootPart.CFrame.LookVector * 3))
                 end
             else
-                Notif:Notification("Resonance 💀", "Thug not found", "GothamSemibold", "Gotham", 3)
+                Notif:Notification("Resonance 🥺", "Thug not found", "GothamSemibold", "Gotham", 3)
             end
         end)
     end
-end)
-
-local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("пидарас у которого только рот и мозг 💀", false, function(Value)
+end);
+local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Glutton Curse 🥺", false, function(Value)
     getgenv().BossingGlutton = Value
     while getgenv().BossingGlutton == true do
         wait(0.015)
@@ -4739,14 +4737,14 @@ local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("пидарас у ко�
                 playerCharacter:MoveTo(gluttonRootPart.Position + gluttonRootPart.CFrame.LookVector * 3)
                 playerCharacter:SetPrimaryPartCFrame(CFrame.new(gluttonRootPart.Position + gluttonRootPart.CFrame.LookVector * 3, gluttonRootPart.Position - gluttonRootPart.CFrame.LookVector * 3))
             else
-                Notif:Notification("Resonance 💀", "Glutton Curse's HumanoidRootPart not found", "GothamSemibold", "Gotham", 3)
+                Notif:Notification("Resonance 🥺", "Glutton Curse's HumanoidRootPart not found", "GothamSemibold", "Gotham", 3)
             end
         end)
     end
 end);
 
 
-local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("стрекоза ёбанная 💀", false, function(Value)
+local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Mosquito Curse 🥺", false, function(Value)
     getgenv().BossingCurse = Value
 
     while getgenv().BossingCurse == true do
@@ -4779,16 +4777,65 @@ local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("стрекоза ёба
                     end)
                 end)
 
-                -- Добавляем движение персонажа к противнику и устанавливаем его ориентацию
                 playerCharacter:MoveTo(targetPosition + direction * 3)
                 playerCharacter:SetPrimaryPartCFrame(CFrame.new(targetPosition + direction * 3, targetPosition - direction * 3))
             else
-                Notif:Notification("Resonance 💀", "Mosquito Curse's HumanoidRootPart not found", "GothamSemibold", "Gotham", 3)
+
+                if Notif then
+                    Notif:Notification("Resonance 🥺", "Mosquito Curse's HumanoidRootPart not found", "GothamSemibold", "Gotham", 3)
+                else
+                end
             end
         end)
     end
 end)
 
+
+
+
+
+
+local SecondAndHalfToggle = SecondAndHalfPage.AddToggle("Contorted Curse ezz  🥺", false, function(Value)
+    getgenv().BossingContortedCurse = Value
+    while getgenv().BossingContortedCurse == true do
+        wait(0.015)
+        pcall(function()
+            local curseHumanoid = workspace.Living:FindFirstChild("Contorted Curse")
+            if curseHumanoid and curseHumanoid:FindFirstChild("HumanoidRootPart") then
+                local curseRootPart = curseHumanoid.HumanoidRootPart
+                local playerCharacter = game:GetService("Players").LocalPlayer.Character
+                local playerPosition = playerCharacter and playerCharacter.PrimaryPart and playerCharacter.PrimaryPart.Position
+                if playerPosition then
+                    local targetPosition = curseRootPart.Position - curseRootPart.CFrame.LookVector * 3
+                    playerCharacter:MoveTo(targetPosition)
+                    playerCharacter:SetPrimaryPartCFrame(CFrame.new(targetPosition))
+                    
+                    task.spawn(function()
+                        pcall(function()
+                            local function Press(key)
+                                return game:GetService("VirtualInputManager"):SendKeyEvent(true, key, false, game)
+                            end
+                            Press("E")
+                            Press("T")
+                            Press("V")
+                            Press("G")
+                            Press("Y")
+                            Press("H")
+                            Press("R")
+                            game:GetService("VirtualUser"):ClickButton1(Vector2.new())
+                        end)
+                    end)
+
+                    
+                    playerCharacter:MoveTo(curseRootPart.Position + curseRootPart.CFrame.LookVector * 3)
+                    playerCharacter:SetPrimaryPartCFrame(CFrame.new(curseRootPart.Position + curseRootPart.CFrame.LookVector * 3, curseRootPart.Position - curseRootPart.CFrame.LookVector * 3))
+                end
+            else
+                Notif:Notification("Resonance 🥺", "Contorted Curse not found", "GothamSemibold", "Gotham", 3)
+            end
+        end)
+    end
+end);
 
 
 
@@ -4862,6 +4909,25 @@ end)
     local BackupEndButton = BackupEndPage.AddButton("Hikarishi | Quest", function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-508.49334716796875, -32.792144775390625, 1508.5386962890625);
     end);
+local TeleportToAFOButton = BackupEndPage.AddButton("AFO | Quest", function()
+    local npcAFO = workspace.Map.NPCs.AFO
+    local player = game.Players.LocalPlayer
+    local character = player.Character
+
+    if npcAFO and npcAFO:FindFirstChild("Humanoid") then
+        local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+
+        if humanoidRootPart then
+            humanoidRootPart.CFrame = CFrame.new(npcAFO.Position)
+        else
+            warn("HumanoidRootPart not found in the player's character.")
+        end
+    else
+        warn("NPC with the name 'AFO' or its Humanoid not found in workspace.Map.NPCs.")
+    end
+end)
+
+
 
 -- More to come!
 end
